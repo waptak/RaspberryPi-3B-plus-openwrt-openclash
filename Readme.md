@@ -51,20 +51,20 @@ opkg remove luci-app-openclash
 ### 4、安装好以后 `需要退出，再重新登录，才能看到服务菜单`
 
 > 安装问题
-* 如果安装报`dnsmasq-full` 错误，我是重启了一下，再装就好了，不保证所有都是这样处理，应该就是要用`dnsmasq-full`，到路由后台看下如果是`installed`,应该也就可以了
-```bash
-# 重启
-reboot
+* 如果安装报`dnsmasq-full` 错误，我是重启了一下，再装就好了，不保证所有都是这样处理，应该就是要用`dnsmasq-full`，到路由后台看下如果是`installed`,应该也就可以
+  ```bash
+  # 重启
+  reboot
 
-opkg remove dnsmasq && opkg install dnsmasq-full
+  opkg remove dnsmasq && opkg install dnsmasq-full
 
-opkg install /tmp/luci-app-openclash_0.43.01-beta_all.ipk
-```
+  opkg install /tmp/luci-app-openclash_0.43.01-beta_all.ipk
+  ```
 
-* 启动clash问题， `libcap` 版本不对， `libcap-bin`未安装，都上传到`tmp`目录重新安装一遍就正常了。下载地址 [官方](https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base/) [腾讯lede镜像](https://mirrors.cloud.tencent.com/lede/snapshots/packages/aarch64_cortex-a53/base/)
-```bash
-# 安装
-opkg install /tmp/libcap-bin_2.51-1_aarch64_cortex-a53.ipk
-# 强制重装
-opkg install /tmp/libcap_2.51-1_aarch64_cortex-a53.ipk --force-depends --force-overwrite
-```
+* 启动clash问题， `libcap` 版本不对， `libcap-bin`未安装，使用本项目里`libcap`的都上传到`tmp`目录重新安装一遍即可。也可以去[官方](https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base/)或者[腾讯lede镜像](https://mirrors.cloud.tencent.com/lede/snapshots/packages/aarch64_cortex-a53/base/)下载
+  ```bash
+  # 安装
+  opkg install /tmp/libcap-bin_2.51-1_aarch64_cortex-a53.ipk
+  # 强制重装
+  opkg install /tmp/libcap_2.51-1_aarch64_cortex-a53.ipk --force-depends --force-overwrite
+  ```

@@ -50,7 +50,7 @@ opkg remove luci-app-openclash
 ```
 ### 4、安装好以后 `需要退出，再重新登录，才能看到服务菜单`
 
-> 安装问题
+> ## 安装问题
 * 如果安装报`dnsmasq-full` 错误，我是重启了一下，再装就好了，不保证所有都是这样处理，应该就是要用`dnsmasq-full`，到路由后台看下如果是`installed`,应该也就可以
   ```bash
   # 重启

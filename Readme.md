@@ -2,6 +2,7 @@
 
 * ### 对应target:`brcm2708`, `bcm2710`
 * ### 对应package: `aarch64_cortex-a53`
+* ### openwrt版本`19.07.8`， openclash版本`0.43.01-beta`
 
 ### 1、使用balenaEtcher写入镜像到TF卡并启动，提示修改`root`密码
 

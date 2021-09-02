@@ -1,7 +1,7 @@
 # 树莓派3B+刷`openwrt`和安装`openclash`说明
 
-* ## 对应target:`brcm2708`, `bcm2710`
-* ## 对应package: `aarch64_cortex-a53`
+* ### 对应target:`brcm2708`, `bcm2710`
+* ### 对应package: `aarch64_cortex-a53`
 
 ### 1、使用balenaEtcher写入镜像到TF卡并启动，提示修改`root`密码
 
